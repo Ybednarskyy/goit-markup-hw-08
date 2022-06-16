@@ -1,0 +1,19 @@
+@mixin font(
+  $font-weight: 400,
+  $font-size: 14px,
+  $line-height: 1.7,
+  $letter-spasing: 0.03em,
+  $color: $primary-text-color
+) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spasing;
+  color: $color;
+}
+
+@mixin transition($property) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

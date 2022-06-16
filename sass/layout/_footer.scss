@@ -1,0 +1,104 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $footer-bg-color;
+}
+
+.footer--logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__box {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-box {
+  margin-right: 70px;
+}
+
+.address {
+  &__list {
+    @extend %list;
+  }
+
+  &.team__item {
+    display: block;
+  }
+
+  &.team__item:not(last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    @extend %link;
+    color: $address-item-color;
+    font-style: normal;
+
+    @include transition(color);
+  }
+
+  &__link--white {
+    color: $primary-white-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
+
+.join {
+  &__title {
+    display: inline-block;
+    @include font(700, 14px, 1.4, 0.03, $primary-white-color);
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+  }
+}
+
+.social__link--footer {
+  background-color: $footer-social-bg-color;
+}
+
+.subscribe {
+  display: flex;
+}
+
+.footer-form {
+  display: block;
+  margin-left: auto;
+
+  &__label {
+    margin-right: 12px;
+  }
+}
+
+.footer-form__input {
+  background-color: transparent;
+  padding: 15px 16px;
+  width: 358px;
+  border: solid 1px $footer-input-border;
+  border-radius: 4px;
+
+  @include font(400, 16px, 1.25, 0.03em, $primary-white-color);
+
+  @include transition(border-color);
+
+  &::placeholder {
+    @include font(400, 16px, 1.25, 0.03em, $address-item-color);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
+
+.submit-icon {
+  margin-left: 10px;
+}

@@ -1,0 +1,15 @@
+%list {
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%header-link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+}
