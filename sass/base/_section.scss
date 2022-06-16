@@ -1,0 +1,25 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .section__title {
+    display: block;
+
+    @include font(700, 36px, 1.17, 0.03em);
+    color: $title-text-color;
+    text-align: center;
+    margin-top: 0;
+
+    margin-bottom: 50px;
+  }
+}
