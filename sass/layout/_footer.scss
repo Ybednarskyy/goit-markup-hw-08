@@ -11,12 +11,18 @@
 }
 
 .footer__box {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  align-items: center;
+
+  @include mq(tablet) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .address-box {
-  margin-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .address {

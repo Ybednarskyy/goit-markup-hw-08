@@ -2,13 +2,21 @@
   padding-top: 0;
 }
 
+.section--desktop-only {
+  display: none;
+
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+
 .work {
   @extend %list;
   display: flex;
   gap: 30px;
 
   &__item {
-    flex-basis: calc(100% / 3);
+    flex-basis: calc((100% - 2 * 30px) / 3);
   }
 
   &__thumb {
