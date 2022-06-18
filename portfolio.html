@@ -301,86 +301,90 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__box">
-          <div class="address-box">
-            <a href="index.html" class="logo footer--logo" lang="en">
-              Web<span class="logo__light">Studio</span>
-            </a>
-            <address class="address">
-              <ul class="address__list">
-                <li class="address__item">
+          <div class="footer__contact-block">
+            <div class="address-box">
+              <a href="index.html" class="logo footer--logo" lang="en">
+                Web<span class="logo__light">Studio</span>
+              </a>
+              <address class="address">
+                <ul class="address__list">
+                  <li class="address__item">
+                    <a
+                      class="address__link address__link--white link"
+                      href="https://goo.gl/maps/Cqgj4mE8dXXuhMne9"
+                      target="_blank"
+                      rel="noreferrer, noopener"
+                      >г. Киев, пр-т Леси Украинки, 26</a
+                    >
+                  </li>
+                  <li class="address__item">
+                    <a class="address__link link" href="mailto:info@example.com"
+                      >info@example.com</a
+                    >
+                  </li>
+                  <li class="address__item">
+                    <a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="join">
+              <p class="join__title">Присоединяйтесь</p>
+              <ul class="social social--join">
+                <li class="social__item">
                   <a
-                    class="address__link address__link--white link"
-                    href="https://goo.gl/maps/Cqgj4mE8dXXuhMne9"
+                    class="social__link social__link--footer link"
+                    href=""
                     target="_blank"
-                    rel="noreferrer, noopener"
-                    >г. Киев, пр-т Леси Украинки, 26</a
+                    rel="noopener noreferrer"
+                    aria-label="Иконка Instagram"
                   >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address__item">
-                  <a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+                <li class="social__item">
+                  <a
+                    class="social__link social__link--footer link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Иконка Twitter"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address__item">
-                  <a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                <li class="social__item">
+                  <a
+                    class="social__link social__link--footer link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Иконка Facebook"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a
+                    class="social__link social__link--footer link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Иконка Linkedin"
+                  >
+                    <svg class="social__icon" width="20" height="20">
+                      <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-          <div class="join">
-            <p class="join__title">Присоединяйтесь</p>
-            <ul class="social social--join">
-              <li class="social__item">
-                <a
-                  class="social__link social__link--footer link"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Иконка Instagram"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons/sprite.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link social__link--footer link"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Иконка Twitter"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons/sprite.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link social__link--footer link"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Иконка Facebook"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons/sprite.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a
-                  class="social__link social__link--footer link"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Иконка Linkedin"
-                >
-                  <svg class="social__icon" width="20" height="20">
-                    <use href="./images/icons/sprite.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
           <form class="footer-form">
             <b class="join__title">Подпишитесь на рассылку</b>
@@ -388,7 +392,7 @@
               <label class="footer-form__label">
                 <input name="email" type="email" class="footer-form__input" placeholder="E-mail" />
               </label>
-              <button type="submit" class="button">
+              <button type="submit" class="button button--footer">
                 Подписаться
                 <svg class="submit-icon" width="24" height="24">
                   <use xlink:href="./images/icons/sprite.svg#icon-send"></use>

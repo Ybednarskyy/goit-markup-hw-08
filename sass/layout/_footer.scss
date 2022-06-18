@@ -6,22 +6,43 @@
 }
 
 .footer--logo {
-  display: block;
   margin-bottom: 20px;
 }
 
 .footer__box {
-  // display: flex;
+  text-align: center;
 
+  @include mq(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__contact-block {
   @include mq(tablet) {
-    // display: flex;
+    display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    padding: 0 85px;
+  }
+
+  @include mq(desktop) {
+    padding: 0;
+    justify-content: flex-start;
   }
 }
 
 .address-box {
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 60px;
+
+  @include mq(desktop) {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
+}
+
+.button--footer {
+  display: inline-flex;
 }
 
 .address {
@@ -69,13 +90,24 @@
   background-color: $footer-social-bg-color;
 }
 
+.social--join {
+  margin-bottom: 60px;
+
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
+}
+
 .subscribe {
-  // display: flex;
+  @include mq(desktop) {
+    display: flex;
+  }
 }
 
 .footer-form {
-  display: block;
-  margin-left: auto;
+  @include mq(desktop) {
+    text-align: start;
+  }
 
   &__label {
     margin-right: 12px;
@@ -85,10 +117,23 @@
 .footer-form__input {
   background-color: transparent;
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
   border: solid 1px $footer-input-border;
   border-radius: 4px;
 
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    display: block;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(desktop) {
+    width: 358px;
+    margin-bottom: 0;
+  }
   @include font(400, 16px, 1.25, 0.03em, $primary-white-color);
 
   @include transition(border-color);
