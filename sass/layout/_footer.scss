@@ -11,11 +11,10 @@
 }
 
 .footer__box {
-  display: block;
-  align-items: center;
+  // display: flex;
 
   @include mq(tablet) {
-    display: flex;
+    // display: flex;
     align-items: baseline;
   }
 }
@@ -71,7 +70,7 @@
 }
 
 .subscribe {
-  display: flex;
+  // display: flex;
 }
 
 .footer-form {
