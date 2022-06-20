@@ -18,7 +18,14 @@
 }
 
 .logo__header {
-  margin-right: 95px;
   padding-top: 24px;
   padding-bottom: 25px;
+
+  @include mq(tablet) {
+    margin-right: 88px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 95px;
+  }
 }
