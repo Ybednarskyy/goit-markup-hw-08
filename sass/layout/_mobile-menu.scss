@@ -1,1 +1,64 @@
+.mobile-menu {
+  @extend %list;
 
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @extend %link;
+
+    @include font(500, 40px, 1.2, 0.02em, $title-text-color);
+    @include transition(color);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__link--current {
+    color: $accent-color;
+  }
+}
+
+.mobile-contacts {
+  @extend %list;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @extend %link;
+
+    @include font(500, 34px, 1.17, 0.02em, $title-text-color);
+    @include transition(color);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-social {
+  display: flex;
+  @extend %list;
+  &__item {
+    &:not(:last-child) {
+      padding-right: 10px;
+      border-right: solid 1px $input-border-color;
+    }
+
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+
+  &__link {
+    @extend %link;
+
+    @include font(500, 18px, 22/18, 0.02em, $accent-color);
+  }
+}

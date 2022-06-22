@@ -6,9 +6,7 @@
   border-bottom: solid 1px $header-border-color;
   width: 100%;
 
-  @include mq(tablet) {
-    position: fixed;
-  }
+  position: fixed;
 }
 
 .header__container {
@@ -37,7 +35,8 @@
   border: none;
 }
 
-.menu-toggle__icon {
+.menu-toggle__open-icon,
+.menu-toggle__close-icon {
   fill: transparrent;
 
   @include transition(fill);
@@ -97,6 +96,14 @@
   &__link--current {
     color: $accent-color;
   }
+
+  @include mq(tablet) {
+    margin-right: 78px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 325px;
+  }
 }
 
 .site-nav__link::after {
@@ -125,12 +132,11 @@
 
 .header-contacts {
   display: flex;
-  margin-left: auto;
+
   @extend %list;
 
   @include mq(tablet) {
-    flex-wrap: wrap;
-    margin-left: auto;
+    flex-direction: column;
 
     &__item:not(:last-child) {
       margin-bottom: 10px;
@@ -138,16 +144,18 @@
   }
 
   @include mq(desktop) {
+    flex-direction: row;
+
     &__item:not(:last-child) {
-      margin-right: 50px;
       margin-bottom: 0;
+      margin-right: 50px;
     }
   }
 
   &__link {
     @extend %link;
 
-    @include font(500, 14px, 1.14, 0.02em, inherit);
+    @include font(500, 12px, 14/12, 0.02em, inherit);
     @include transition(color);
   }
 
@@ -160,4 +168,34 @@
     fill: currentColor;
     margin-right: 10px;
   }
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 796px;
+  z-index: 10000;
+  background-color: $primary-white-color;
+
+  transform: translateY(-100%);
+  @include transition(transform);
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+}
+
+.menu-box {
+  position: relative;
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+.menu-toggle--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
