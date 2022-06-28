@@ -22,6 +22,36 @@
   }
 }
 
+.menu-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background-color: $primary-white-color;
+
+  transform: translateY(-100%);
+  @include transition(transform);
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+}
+
+.menu-box {
+  position: relative;
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+.menu-toggle--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
 .mobile-contacts {
   @extend %list;
 

@@ -318,37 +318,6 @@ img {
   margin-right: 10px;
 }
 
-.menu-container {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 796px;
-  z-index: 10000;
-  background-color: #ffffff;
-  transform: translateY(-100%);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-container.is-open {
-  transform: translateY(0);
-}
-
-.menu-box {
-  position: relative;
-  min-width: 320px;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 48px 40px;
-}
-
-.menu-toggle--close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
-
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -1103,6 +1072,37 @@ img {
 }
 .mobile-menu__link--current {
   color: #2196f3;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background-color: #ffffff;
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+}
+
+.menu-box {
+  position: relative;
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+.menu-toggle--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .mobile-contacts__item:not(:last-child) {
