@@ -1,3 +1,32 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 48px 40px;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 10000;
+  background-color: $primary-white-color;
+
+  transform: translateY(-130%);
+  @include transition(transform);
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+}
+
+.menu-toggle--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
 .mobile-menu {
   @extend %list;
 
@@ -22,38 +51,10 @@
   }
 }
 
-.menu-container {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
-  background-color: $primary-white-color;
-
-  transform: translateY(-100%);
-  @include transition(transform);
-}
-
-.menu-container.is-open {
-  transform: translateY(0);
-}
-
-.menu-box {
-  position: relative;
-  min-width: 320px;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 48px 40px;
-}
-
-.menu-toggle--close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
-
 .mobile-contacts {
   @extend %list;
+  margin-top: auto;
+  margin-bottom: 64px;
 
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -62,8 +63,15 @@
   &__link {
     @extend %link;
 
-    @include font(500, 34px, 1.17, 0.02em, $title-text-color);
     @include transition(color);
+
+    &--phone {
+      @include font(500, 34px, 1.17, 0.02em, $accent-color);
+    }
+
+    &--mail {
+      @include font(500, 24px, 1.17, 0.02em, $primary-text-color);
+    }
   }
 
   &__link:hover,
@@ -75,6 +83,8 @@
 .mobile-social {
   display: flex;
   @extend %list;
+  margin-bottom: 15px;
+
   &__item {
     &:not(:last-child) {
       padding-right: 10px;
@@ -89,6 +99,6 @@
   &__link {
     @extend %link;
 
-    @include font(500, 18px, 22/18, 0.02em, $accent-color);
+    @include font(500, 16px, 1.22, 0.02em, $accent-color);
   }
 }

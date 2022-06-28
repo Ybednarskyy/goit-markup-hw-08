@@ -8,6 +8,10 @@
   margin-bottom: 50px;
   gap: 8px;
 
+  @include mq(tablet) {
+    justify-content: center;
+  }
+
   &__button {
     background-color: $section-bg-color;
     padding: 6px 22px;
@@ -39,18 +43,14 @@
 
   &__item {
     display: block;
-    flex-basis: 100%;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    width: 100%;
 
     @include mq(tablet) {
-      flex-basis: calc((100% - 30px) / 2);
+      width: calc((100% - 30px) / 2);
     }
 
     @include mq(desktop) {
-      flex-basis: calc((100% - 2 * 30px) / 3);
+      width: calc((100% - 2 * 30px) / 3);
     }
   }
 

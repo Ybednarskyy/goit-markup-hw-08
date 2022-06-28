@@ -5,13 +5,14 @@
   gap: 30px;
 
   &__item {
-    flex-basis: calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+
     @include mq(tablet) {
-      flex-basis: calc((100% - 2 * 30px) / 3);
+      width: calc((100% - 2 * 30px) / 3);
     }
 
     @include mq(desktop) {
-      flex-basis: calc((100% - 5 * 30px) / 6);
+      width: calc((100% - 5 * 30px) / 6);
     }
   }
 }
