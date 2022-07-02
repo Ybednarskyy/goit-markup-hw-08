@@ -79,7 +79,7 @@
 .join {
   &__title {
     display: inline-block;
-    @include font(700, 14px, 1.4, 0.03, $primary-white-color);
+    @include font(700, null, 1.4, null, $primary-white-color);
     text-transform: uppercase;
 
     margin-bottom: 20px;
@@ -134,12 +134,12 @@
     width: 358px;
     margin-bottom: 0;
   }
-  @include font(400, 16px, 1.25, 0.03em, $primary-white-color);
+  @include font(null, 16px, 1.25, null, $primary-white-color);
 
   @include transition(border-color);
 
   &::placeholder {
-    @include font(400, 16px, 1.25, 0.03em, $address-item-color);
+    @include font(null, 16px, 1.25, null, $address-item-color);
   }
 
   &:hover,

@@ -13,7 +13,12 @@
   background-position: center;
 
   &__title {
-    @include font(900, 44px, 1.36, 0.06em, $primary-white-color);
+    @include font(900, 26px, 1.36, 0.06em, $primary-white-color);
+
+    @include mq(desktop) {
+      @include font(null, 44px, 1.6, null, null);
+    }
+
     text-align: center;
     text-transform: uppercase;
     margin-top: 0;
