@@ -7,6 +7,10 @@
 
   padding: 48px 40px;
 
+  @media screen and (max-width: 380px) {
+    padding: 30px 30px;
+  }
+
   width: 100vw;
   height: 100vh;
 
@@ -67,6 +71,10 @@
 
     &--phone {
       @include font(500, 34px, 1.17, 0.02em, $accent-color);
+
+      @media screen and (max-width: 380px) {
+        font-size: 26px;
+      }
     }
 
     &--mail {
@@ -98,7 +106,10 @@
 
   &__link {
     @extend %link;
-
     @include font(500, 16px, 1.22, 0.02em, $accent-color);
+
+    @media screen and (max-width: 380px) {
+      font-size: 12px;
+    }
   }
 }

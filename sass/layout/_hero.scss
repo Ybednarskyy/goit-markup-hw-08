@@ -1,22 +1,70 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   background-image: linear-gradient(to right, $bacground-gradient-color, $bacground-gradient-color),
-    url('../images/bg-img/bg-image.jpg');
+    url('../images/bg-img/hero-bg-mob.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @include retina {
+    background-image: linear-gradient(
+        to right,
+        $bacground-gradient-color,
+        $bacground-gradient-color
+      ),
+      url('../images/bg-img/hero-bg-mob-2x.jpg');
+  }
+
+  @include mq(tablet) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to right,
+        $bacground-gradient-color,
+        $bacground-gradient-color
+      ),
+      url('../images/bg-img/hero-bg-tab.jpg');
+
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          $bacground-gradient-color,
+          $bacground-gradient-color
+        ),
+        url('../images/bg-img/hero-bg-tab-2x.jpg');
+    }
+  }
+
+  @include mq(desktop) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+        to right,
+        $bacground-gradient-color,
+        $bacground-gradient-color
+      ),
+      url('../images/bg-img/hero-bg.jpg');
+
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          $bacground-gradient-color,
+          $bacground-gradient-color
+        ),
+        url('../images/bg-img/hero-bg-2x.jpg');
+    }
+  }
 
   &__title {
     @include font(900, 26px, 1.36, 0.06em, $primary-white-color);
 
     @include mq(desktop) {
-      @include font(null, 44px, 1.6, null, null);
+      @include font(null, 44px, 1.36, null, null);
     }
 
     text-align: center;
