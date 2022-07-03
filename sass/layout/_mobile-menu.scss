@@ -2,6 +2,8 @@
   position: fixed;
   top: 0;
 
+  overflow-y: auto;
+
   display: flex;
   flex-direction: column;
 
@@ -17,7 +19,7 @@
   z-index: 10000;
   background-color: $primary-white-color;
 
-  transform: translateY(-130%);
+  transform: translateY(-100%);
   @include transition(transform);
 }
 
