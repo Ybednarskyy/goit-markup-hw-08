@@ -664,6 +664,7 @@ img {
   .address-box {
     margin-right: 70px;
     margin-bottom: 0;
+    text-align: start;
   }
 }
 
@@ -671,10 +672,10 @@ img {
   display: inline-flex;
 }
 
-.address.team__item {
+.address__item {
   display: block;
 }
-.address.team__item:not(last-child) {
+.address__item:not(last-child) {
   margin-bottom: 9px;
 }
 .address__link {
@@ -702,6 +703,10 @@ img {
 
 .social__link--footer {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__link--footer > .social__icon {
+  fill: #ffffff;
 }
 
 .social--join {

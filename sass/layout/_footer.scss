@@ -38,6 +38,7 @@
   @include mq(desktop) {
     margin-right: 70px;
     margin-bottom: 0;
+    text-align: start;
   }
 }
 
@@ -50,11 +51,11 @@
     @extend %list;
   }
 
-  &.team__item {
+  &__item {
     display: block;
   }
 
-  &.team__item:not(last-child) {
+  &__item:not(last-child) {
     margin-bottom: 9px;
   }
 
@@ -88,6 +89,10 @@
 
 .social__link--footer {
   background-color: $footer-social-bg-color;
+}
+
+.social__link--footer > .social__icon {
+  fill: $primary-white-color;
 }
 
 .social--join {
