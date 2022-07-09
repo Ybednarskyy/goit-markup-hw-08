@@ -101,6 +101,8 @@
 
   &__text {
     @include font(400, 18px, 1.55, 0.03em, $primary-white-color);
+    display: inline-block;
+    margin: auto;
   }
 
   &__border {

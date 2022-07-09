@@ -84,7 +84,7 @@
 
     @extend %link;
 
-    @include font(500, null, 1.14, 0.02em, $title-text-color);
+    @include font(500, 14px, 1.14, 0.02em, $title-text-color);
     @include transition(color);
   }
 
@@ -158,7 +158,7 @@
     @include font(500, 12px, 1.22, 0.02em, inherit);
 
     @include mq(desktop) {
-      @include font(null, 14px, 1.17, null, null);
+      @include font(400, 14px, 1.14, 0.02em, $primary-text-color);
     }
 
     @include transition(color);
