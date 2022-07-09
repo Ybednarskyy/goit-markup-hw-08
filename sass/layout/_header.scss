@@ -1,12 +1,12 @@
 .header {
-  top: 0;
-  left: 0;
-  z-index: 10;
+  // top: 0;
+  // left: 0;
+  // z-index: 10;
+  // position: fixed;
+
   background-color: $primary-white-color;
   border-bottom: solid 1px $header-border-color;
   width: 100%;
-
-  position: fixed;
 }
 
 .header__container {
